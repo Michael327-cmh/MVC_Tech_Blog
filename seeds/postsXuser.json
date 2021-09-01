@@ -1,0 +1,23 @@
+[
+    {
+      "author": "Free Spirit Coder",
+      "title": "Dancing in the Rain",
+      "description": "Dancing in the rain and coding are my two favorite activities. I have designed an app that notifies me when and where the best times to dance in the rain will be. In doing so, I am able to code until my app DIR app alarm goes off and then I head out to Dance In the Rain!",
+      "post_time": "9:00",
+      "post_date": "(2021, 6, 12)"
+    },
+    {
+        "author": "SecurityFirst",
+        "title": "Coding in Code",
+        "description": "Securing your applications should be your number one priority prior to deployment. All the hours spent on work should be protected so that you can freely share with the world.",
+        "post_time": "2:13",
+        "post_date": "(2021, 3, 27)"  
+    },
+    {
+        "author": "Compliance Coder",
+        "title": "CoDiinG is THEEEEE FUTUreE",
+        "description": "Coding should be taught in school, starting in elementary school. It should be viewed as a second language so that students come out of highschool with a proficiency in a coding language of their choice.",
+        "post_time": "12:28",
+        "post_date": "(2021, 9, 1)"
+    }
+]

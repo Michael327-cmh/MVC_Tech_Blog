@@ -1,0 +1,38 @@
+<section class="py-5 text-center container-fluid bg-light">
+  <div class="row py-lg-2">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Welcome Home!</h1>
+      <h3>You are logged in as: {{username}}</h3>
+      <p class="lead text-muted">
+        Take a moment to reflect on your shared posts!
+      </p>
+      <p>
+        <a href="/posts/newfiles" class="btn btn-success my-2">Sharing</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="container d-flex justify-content-center" id="post-list">
+    <div class="col-md-6 my-3">
+      {{#if posts.length}}
+      <h3>Review your Posts:</h3>
+
+      {{#each posts as |post|}}
+      <div class="callout callout-primary">
+        <h4><a href="/posts/{{post.id}}">{{post.title}}</a></h4>
+        <div class="row">
+        <div class="col-7 d-flex justify-content-start"> {{post.post_date}} | {{post.post_time}} </div>
+      </div>
+        <div class="row">
+        <div class="col-7 d-flex justify-content-start"> {{post.description}} </div>
+      </div><hr />
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a href="/posts/{{post.id}}/newfiles" class="btn btn-warning me-md-2">Edit Posts</a>
+</div>      </div>
+ {{/each}}
+    </div>
+ {{/if}}
+
+</main>

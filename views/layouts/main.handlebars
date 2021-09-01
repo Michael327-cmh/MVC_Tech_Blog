@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Blogging For Tech</title>
+  <script src="https://kit.fontawesome.com/ef1290e982.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- CSS only -->
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+  <link href="/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex flex-column h-100" id="top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+    <div class="container">
+      <a class="navbar-brand" href="/"><i class="fas fa-users"></i> Blogging for Tech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <li class="pe-3"><button href="/personal" type="button" class="btn btn-success"><i class="far fa-eye"></i> My
+              Posts</button>
+          </li>
+          <button class="btn btn-outline-primary" href="/" type="button" id="logout-btn">logout</button> 
+           <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Logged in as {{username}}</a>
+ 
+          {{else}}
+
+
+          <li>
+            <!-- Button trigger modal -->
+            <a href='/login' type="button" class="btn btn-primary mx-3">
+              Login
+            </a>
+
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Modal -->
+ 
+
+
+  <main>
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  </main>
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <p class="float-end mb-1 totop">
+        <a href="#"><i class="fas fa-arrow-square-up fa-2x"></i> Back to top</a>
+      </p>
+      <p class="mb-0">View on <a href="https://github.com/Michael327-cmh/MVC_Tech_Blog" target="_blank">Github</a> --
+        Blogging for Tech</p>
+    </div>
+  </footer>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

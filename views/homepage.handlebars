@@ -1,0 +1,35 @@
+    <section class="py-5 text-center container-fluid bg-light">
+      <div class="row py-lg-2">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Blogging for Tech</h1>
+          <p class="lead text-muted">Blogging for Tech is a place for users to come and post their ideas about technology, 
+              as it pertains to all facets of life. They are also able to review others' posts when visiting the site.</p>
+          <p>
+            <a href="/posts/newfiles" class="btn btn-success my-2">Create a New Post</a>
+            <a href="/personal" class="btn btn-secondary my-2">View My Saved Posts</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {{#each posts as |post| }}
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://via.placeholder.com/225" height="225">
+              <div class="card-body">
+                <h5 class="card-title"><a href="/post/{{id}}">{{posts.title}}</a> 
+                <small><span class="float-end text-muted">{{posts_date}}</span></h5></small>
+                <p class="card-text">{{posts.description}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                 </div>
+              </div>
+            </div>
+          </div>              
+          {{/each}}
+          </div>
+            </div>
+          </div>
+
