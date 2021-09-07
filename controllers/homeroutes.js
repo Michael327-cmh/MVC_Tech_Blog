@@ -4,7 +4,7 @@ const withAuth = require('../utils/authorization');
 
 router.get('/', async (req, res) => {
   try {
-    //GET all Posts and JOIN with user data
+    
     const postData = await Posts.findAll({
       include: [
         {
@@ -13,11 +13,11 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-    //serialize data so the template can read it
+    
     const posts = postData.map((Posts) => Posts.get({ plain: true }));
 
-    //Pass serialized data
-    res.render('homepage', /* req.session.username, */{
+    
+    res.render('homepage', {
       posts,
       logged_in: req.session.logged_in,
     });
@@ -26,10 +26,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
+
 router.get('/personal', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
+    
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Posts }],
